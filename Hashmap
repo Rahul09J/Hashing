@@ -1,0 +1,51 @@
+package Hashing;
+import java.util.*;
+public class Hashmap {
+    public static void main(String[] args) {
+        // key value pair
+        // key is always unique
+
+        //country(key),population(value)
+        HashMap<String,Integer> map = new HashMap<>();
+
+        //insertion
+        map.put("India",120);
+        map.put("US",60);
+        map.put("china",130);
+
+        //print
+        System.out.println(map);
+        // hashmap is unordered koi bhi order me print ho skta hai
+
+        // update
+        map.put("china",200);
+        System.out.println(map);
+
+        // search
+        if(map.containsKey("china")){
+            System.out.println("true");
+        }else{
+            System.out.println("False");
+        }
+
+        System.out.println(map.get("china"));
+        System.out.println(map.get("indonesia"));
+
+        // iterator in HAshmap
+        // Map.Entry<Integer,Integer> e : Map.entrySet() ---- syntax
+
+        for(Map.Entry<String,Integer> e : map.entrySet()){
+            System.out.println(e.getKey());
+            System.out.println(e.getValue());
+        }
+
+
+        //Removing
+        map.remove("china");
+        System.out.println(map);
+
+
+
+
+    }
+}
